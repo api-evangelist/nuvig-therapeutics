@@ -1,17 +1,61 @@
 aid: nuvig-therapeutics
 name: Nuvig Therapeutics
-description: 'Nuvig Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Nuvig Therapeutics, Inc. is a privately held, clinical-stage biotechnology
+  company headquartered at 3450 Hillview Avenue, Palo Alto, California, developing
+  next-generation immunomodulators for chronic autoimmune and inflammatory disease.
+  Its lead investigational candidate, NVG-2089, is an engineered Fc fragment designed
+  to selectively engage type II Fc receptors and harness an endogenous regulatory
+  mechanism that resolves autoimmune dysregulation while preserving normal immune
+  function; the first patient was dosed in a Phase 2 trial in chronic inflammatory
+  demyelinating polyneuropathy (CIDP) in May 2025. The company announced a $161 million
+  Series B financing in December 2024. Nuvig is a therapeutics developer, not a software
+  vendor: as of August 2026 it publishes no developer portal, API reference, SDK,
+  GitHub organization, or machine-readable API contract of any kind. Its public web
+  surface is a corporate WordPress site covering science, pipeline, team, news and
+  careers, from which the only machine-readable artifact published is a Yoast-generated
+  llms.txt.'
+image: https://nuvigtx.com/wp-content/uploads/2022/04/bg-logo-nuvig.svg
 url: https://raw.githubusercontent.com/api-evangelist/nuvig-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Nuvig is a clinical-stage biotech whose product is a drug candidate (NVG-2089),
+    not software — nuvigtx.com is a five-page corporate WordPress site with no
+    /developers, /api or /docs path, no GitHub organization, and no package on any
+    registry.
+  evidence:
+  - url: https://nuvigtx.com/developers
+    status: 404
+  - url: https://nuvigtx.com/openapi.json
+    status: 404
+  - url: https://nuvigtx.com/.well-known/agent-card.json
+    status: 404
+  - url: https://nuvigtx.com/llms.txt
+    status: 200
+  checked: '2026-08-04'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Immunology
+- Autoimmune Disease
+- Therapeutics
+- Clinical Trials
+- Life Sciences
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +63,39 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/nuvig-therapeutics-domain-security.yml
 - type: Website
+  url: https://nuvigtx.com/
+- type: About
+  url: https://nuvigtx.com/science/
+- type: Science
+  url: https://nuvigtx.com/science/
+- type: Pipeline
+  url: https://nuvigtx.com/pipeline/
+- type: Team
+  url: https://nuvigtx.com/team/
+- type: News
+  url: https://nuvigtx.com/news/
+- type: Blog
+  url: https://nuvigtx.com/news/
+- type: BlogFeeds
+  url: https://nuvigtx.com/feed/
+- type: Careers
+  url: https://nuvigtx.com/careers/
+- type: Contact
+  url: https://nuvigtx.com/contact/
+- type: TermsOfService
+  url: https://nuvigtx.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://nuvigtx.com/privacy-policy/
+- type: CookiePolicy
+  url: https://nuvigtx.com/cookie-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/nuvig-therapeutics-inc
+- type: Twitter
+  url: https://x.com/nuvigtx
+- type: Investors
   url: https://www.hiive.com/securities/nuvig-therapeutics-stock
+- type: LLMsTxt
+  url: llms/nuvig-therapeutics-llms.txt
